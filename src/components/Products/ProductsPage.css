@@ -1,0 +1,10 @@
+.products_page {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    padding: 20px;
+}
+
+.products_list_section {
+    padding: 10px;
+    padding-left: 30px;
+}
