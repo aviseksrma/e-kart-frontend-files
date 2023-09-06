@@ -16,7 +16,7 @@ const ProductsSidebar = () => {
             <Links
               key={category._id}
               title={category.name}
-              link={`${config.backendURL}/category=${category.name}`}
+              link={`/products?category=${category.name}`}
               sidebar={true}
             />
           ))}
