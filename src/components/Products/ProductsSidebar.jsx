@@ -1,6 +1,7 @@
 import useData from "../../hooks/useData";
 import Links from "../Navbar/Links";
 import "./ProductsSidebar.css";
+import config from "../../config.json";
 
 const ProductsSidebar = () => {
   const { data: categories, error } = useData("/category");
@@ -15,7 +16,7 @@ const ProductsSidebar = () => {
             <Links
               key={category._id}
               title={category.name}
-              link={`/products?category=${category.name}`}
+              link={`${config.backendURL}/category=${category.name}`}
               sidebar={true}
             />
           ))}

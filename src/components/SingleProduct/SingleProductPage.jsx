@@ -6,6 +6,7 @@ import QuantityInput from "./QuantityInput";
 import useData from "../../hooks/useData";
 import CartContex from "../../contexts/CartContex";
 import UserContex from "../../contexts/UserContex";
+import config from "../../config.json";
 
 const SingleProductPage = () => {
   const user = useContext(UserContex);
@@ -26,7 +27,7 @@ const SingleProductPage = () => {
               {product.images.map((image, index) => (
                 <img
                   key={index}
-                  src={`http://localhost:5001/products/${image}`}
+                  src={`${config.backendURL}/products/${image}`}
                   alt={product.title}
                   className={selectedImage === index ? "selected_image" : ""}
                   onClick={() => setSelectedImage(index)}
